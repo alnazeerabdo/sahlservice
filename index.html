@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Service Details - Ashal</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#A59D71", // Muted Gold/Olive from screenshot
+                        secondary: "#000000",
+                        "background-light": "#F8F8F8",
+                        "background-dark": "#121212",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E1E1E",
+                        "input-light": "#F0F0F0",
+                        "input-dark": "#2C2C2C",
+                    },
+                    fontFamily: {
+                        display: ["Tajawal", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'header': "2.5rem",
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0, 0, 0, 0.05)',
+                        'nav': '0 -4px 20px rgba(0, 0, 0, 0.1)',
+                    }
+                },
+            },
+        };
+    </script>
+<style>.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }.service-radio:checked + div {
+            border-color: #A59D71;
+            background-color: rgba(165, 157, 113, 0.1);
+        }
+        .service-radio:checked + div .check-icon {
+            opacity: 1;
+            transform: scale(1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-100 h-screen overflow-hidden flex flex-col items-center">
+<div class="w-full max-w-md h-full flex flex-col relative bg-background-light dark:bg-background-dark shadow-2xl overflow-hidden">
+<header class="bg-primary pt-12 pb-8 px-6 rounded-b-[40px] shadow-lg shrink-0 relative z-20">
+<div class="absolute top-3 left-6 right-6 flex justify-between items-center text-white text-xs opacity-90">
+<div class="flex items-center gap-1">
+<span class="material-icons-outlined text-sm">wifi</span>
+<span class="material-icons-outlined text-sm">battery_full</span>
+</div>
+<span>09:00 AM</span>
+</div>
+<div class="flex justify-between items-center mb-4 text-white">
+<div class="flex gap-4">
+<span class="material-icons-outlined text-2xl cursor-pointer">notifications</span>
+<span class="material-icons-outlined text-2xl cursor-pointer">person</span>
+</div>
+<div class="text-3xl font-bold tracking-tighter flex items-center justify-center">
+<span class="italic font-serif">A</span><span class="text-sm self-end mb-1 ml-1">SHAL</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-sm">مدينة</span>
+<span class="material-icons-outlined text-xl">location_on</span>
+</div>
+</div>
+<div class="bg-white/90 dark:bg-surface-dark/90 rounded-full h-10 flex items-center px-4 shadow-sm backdrop-blur-sm">
+<span class="material-icons-outlined text-gray-400">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full text-right placeholder-gray-400 dark:text-white" placeholder="بحث عن..." type="text"/>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto no-scrollbar pb-24 pt-4 px-5">
+<div class="relative w-full h-48 rounded-3xl overflow-hidden mb-6 shadow-soft group">
+<img alt="Abstract geometric colorful shapes representing graphic design" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj0N_JCmtC6ytwVLBNvK_gbbmniIzB1GdRzKcl6lo0Lp9UWV5f6Se_XfsHNAYKynCdDUTnmnQRijUh-UwHVMy040A2sCtDG6ZzEwN8RPEnZ4yLBxL7AiyuxtjBYHwXq8FVo6VaFOjoW2UyHbTvlDyT4h1n3PdW8OJhIjSitCZKV3CtW8dHBUh1XvGjEWTRbGhEC7OOFZN15NgYhD99eYslbjN-amt04n6_ji0rHfzviXfR1nQUC9_VubskgrGVgDQNfelWPJCXJHI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-5">
+<h1 class="text-white text-2xl font-bold drop-shadow-md">تصميم بوستر سوشيال ميديا</h1>
+</div>
+</div>
+<div class="space-y-4 mb-8">
+<h2 class="text-lg font-bold text-gray-800 dark:text-white mb-3">اختر نوع الخدمة</h2>
+<label class="cursor-pointer block relative">
+<input checked="" class="service-radio hidden" name="service_type" type="radio"/>
+<div class="bg-surface-light dark:bg-surface-dark p-4 rounded-2xl border-2 border-transparent shadow-sm flex justify-between items-center transition-all duration-300">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-icons-outlined">star_outline</span>
+</div>
+<div>
+<h3 class="font-bold text-gray-800 dark:text-white">بوستر بسيط</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400">تصميم سريع وجذاب</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-bold text-primary text-lg">30 ر.س</span>
+<div class="w-6 h-6 rounded-full border border-gray-300 dark:border-gray-600 flex items-center justify-center check-icon opacity-0 transition-opacity">
+<div class="w-3 h-3 bg-primary rounded-full"></div>
+</div>
+</div>
+</div>
+</label>
+<label class="cursor-pointer block relative">
+<input class="service-radio hidden" name="service_type" type="radio"/>
+<div class="bg-surface-light dark:bg-surface-dark p-4 rounded-2xl border-2 border-transparent shadow-sm flex justify-between items-center transition-all duration-300">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-icons-outlined">workspace_premium</span>
+</div>
+<div>
+<h3 class="font-bold text-gray-800 dark:text-white">بوستر احترافي</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400">تصميم مخصص عالي الجودة</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-bold text-primary text-lg">50 ر.س</span>
+<div class="w-6 h-6 rounded-full border border-gray-300 dark:border-gray-600 flex items-center justify-center check-icon opacity-0 transition-opacity">
+<div class="w-3 h-3 bg-primary rounded-full"></div>
+</div>
+</div>
+</div>
+</label>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-5 rounded-2xl shadow-sm mb-6">
+<div class="flex justify-between items-center mb-4 border-b border-gray-100 dark:border-gray-700 pb-4">
+<span class="font-bold text-gray-700 dark:text-gray-200">عدد المنشورات</span>
+<div class="flex items-center bg-input-light dark:bg-input-dark rounded-lg p-1">
+<button class="w-8 h-8 rounded-md bg-white dark:bg-gray-600 shadow-sm flex items-center justify-center text-primary hover:bg-gray-50 dark:hover:bg-gray-500 transition-colors">
+<span class="material-icons-outlined text-sm">remove</span>
+</button>
+<span class="w-8 text-center font-bold text-gray-800 dark:text-white">1</span>
+<button class="w-8 h-8 rounded-md bg-primary text-white shadow-sm flex items-center justify-center hover:bg-opacity-90 transition-colors">
+<span class="material-icons-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+<div class="mb-2">
+<h4 class="font-bold text-sm text-gray-700 dark:text-gray-300 mb-2">وصف الخدمة</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                        خدمة تصميم بوسترات السوشيال ميديا تساعدك على إبراز هويتك التجارية. يشمل التصميم اختيار الألوان المناسبة والخطوط الجذابة لضمان وصول رسالتك للجمهور المستهدف.
+                    </p>
+</div>
+</div>
+<div class="mb-8">
+<label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">ملاحظات إضافية</label>
+<textarea class="w-full h-32 p-4 rounded-xl bg-input-light dark:bg-input-dark border-none focus:ring-2 focus:ring-primary text-gray-800 dark:text-white placeholder-gray-400 resize-none text-sm" placeholder="اكتب أي تفاصيل إضافية أو تعليمات خاصة للمصمم هنا..."></textarea>
+</div>
+<button class="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl hover:opacity-95 transform transition-all active:scale-95 flex items-center justify-center gap-2 mb-6">
+<span>إتمام الطلب</span>
+<span class="material-icons-outlined text-sm">arrow_back</span>
+</button>
+</main>
+<nav class="absolute bottom-0 w-full h-20 bg-black text-white rounded-t-[30px] shadow-nav z-30 flex justify-between items-center px-6 pb-2">
+<a class="flex flex-col items-center gap-1 text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="material-icons-outlined text-2xl">favorite_border</span>
+<span class="text-[10px]">المفضلة</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400 hover:text-primary transition-colors mr-4" href="#">
+<span class="material-icons-outlined text-2xl">send</span>
+<span class="text-[10px]">العروض</span>
+</a>
+<div class="relative -top-8 group cursor-pointer">
+<div class="w-16 h-16 bg-primary rounded-full border-[6px] border-background-light dark:border-background-dark flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+<span class="material-icons-outlined text-white text-3xl">home</span>
+</div>
+<span class="absolute -bottom-4 w-full text-center text-[10px] font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity">الرئيسية</span>
+</div>
+<a class="flex flex-col items-center gap-1 text-gray-400 hover:text-primary transition-colors ml-4" href="#">
+<span class="material-icons-outlined text-2xl">receipt_long</span>
+<span class="text-[10px]">الطلبات</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="material-icons-outlined text-2xl">person_outline</span>
+<span class="text-[10px]">حسابي</span>
+</a>
+</nav>
+</div>
+
+</body></html>
