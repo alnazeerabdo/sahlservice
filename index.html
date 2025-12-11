@@ -1,195 +1,772 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Service Details - Ashal</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-<script>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>دعوة زفاف جنى وسامي</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
         tailwind.config = {
-            darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        primary: "#A59D71", // Muted Gold/Olive from screenshot
-                        secondary: "#000000",
-                        "background-light": "#F8F8F8",
-                        "background-dark": "#121212",
-                        "surface-light": "#FFFFFF",
-                        "surface-dark": "#1E1E1E",
-                        "input-light": "#F0F0F0",
-                        "input-dark": "#2C2C2C",
+                        "primary": "#d4a574",
+                        "primary-light": "#e8c9a8",
+                        "primary-dark": "#b8956a",
+                        "secondary": "#a8d4c4",
+                        "accent": "#f5e6d3",
+                        "rose": "#f4c2c2",
+                        "rose-light": "#fce4e4",
+                        "cream": "#fdf8f3",
+                        "soft-gray": "#f7f5f3",
+                        "text-dark": "#4a4a4a",
+                        "text-light": "#7a7a7a",
                     },
                     fontFamily: {
-                        display: ["Tajawal", "sans-serif"],
+                        "body": ["Tajawal", "sans-serif"],
                     },
-                    borderRadius: {
-                        DEFAULT: "0.5rem",
-                        'header': "2.5rem",
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in-up': 'fadeInUp 1s ease-out',
+                        'fade-in-down': 'fadeInDown 1s ease-out',
+                        'scale-in': 'scaleIn 0.8s ease-out',
+                        'slide-in-right': 'slideInRight 1s ease-out',
+                        'slide-in-left': 'slideInLeft 1s ease-out',
+                        'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
+                        'sparkle': 'sparkle 2s ease-in-out infinite',
+                        'bounce-slow': 'bounce 2s ease-in-out infinite',
                     },
-                    boxShadow: {
-                        'soft': '0 4px 20px rgba(0, 0, 0, 0.05)',
-                        'nav': '0 -4px 20px rgba(0, 0, 0, 0.1)',
-                    }
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(40px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeInDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-40px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        scaleIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.8)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        },
+                        slideInRight: {
+                            '0%': { opacity: '0', transform: 'translateX(100px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        slideInLeft: {
+                            '0%': { opacity: '0', transform: 'translateX(-100px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        pulseSoft: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0.7' },
+                        },
+                        sparkle: {
+                            '0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
+                            '50%': { opacity: '1', transform: 'scale(1.2)' },
+                        },
+                    },
                 },
             },
-        };
+        }
     </script>
-<style>.no-scrollbar::-webkit-scrollbar {
-            display: none;
+    <style>
+        html {
+            scroll-behavior: smooth;
         }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }.service-radio:checked + div {
-            border-color: #A59D71;
-            background-color: rgba(165, 157, 113, 0.1);
+        
+        * {
+            font-family: 'Tajawal', sans-serif;
         }
-        .service-radio:checked + div .check-icon {
-            opacity: 1;
-            transform: scale(1);
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fdf8f3;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d4a574;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b8956a;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(212, 165, 116, 0.2);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #d4a574, #a8d4c4, #f4c2c2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .flower-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4a574' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .decorative-line {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #d4a574, transparent);
+        }
+        
+        .hover-lift {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .hover-lift:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(212, 165, 116, 0.25);
+        }
+        
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        
+        .particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, #d4a574 0%, transparent 70%);
+            border-radius: 50%;
+            animation: sparkle 3s ease-in-out infinite;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .heartbeat {
+            animation: heartbeat 1.5s ease-in-out infinite;
         }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-100 h-screen overflow-hidden flex flex-col items-center">
-<div class="w-full max-w-md h-full flex flex-col relative bg-background-light dark:bg-background-dark shadow-2xl overflow-hidden">
-<header class="bg-primary pt-12 pb-8 px-6 rounded-b-[40px] shadow-lg shrink-0 relative z-20">
-<div class="absolute top-3 left-6 right-6 flex justify-between items-center text-white text-xs opacity-90">
-<div class="flex items-center gap-1">
-<span class="material-icons-outlined text-sm">wifi</span>
-<span class="material-icons-outlined text-sm">battery_full</span>
-</div>
-<span>09:00 AM</span>
-</div>
-<div class="flex justify-between items-center mb-4 text-white">
-<div class="flex gap-4">
-<span class="material-icons-outlined text-2xl cursor-pointer">notifications</span>
-<span class="material-icons-outlined text-2xl cursor-pointer">person</span>
-</div>
-<div class="text-3xl font-bold tracking-tighter flex items-center justify-center">
-<span class="italic font-serif">A</span><span class="text-sm self-end mb-1 ml-1">SHAL</span>
-</div>
-<div class="flex items-center gap-1">
-<span class="text-sm">مدينة</span>
-<span class="material-icons-outlined text-xl">location_on</span>
-</div>
-</div>
-<div class="bg-white/90 dark:bg-surface-dark/90 rounded-full h-10 flex items-center px-4 shadow-sm backdrop-blur-sm">
-<span class="material-icons-outlined text-gray-400">search</span>
-<input class="bg-transparent border-none focus:ring-0 text-sm w-full text-right placeholder-gray-400 dark:text-white" placeholder="بحث عن..." type="text"/>
-</div>
-</header>
-<main class="flex-1 overflow-y-auto no-scrollbar pb-24 pt-4 px-5">
-<div class="relative w-full h-48 rounded-3xl overflow-hidden mb-6 shadow-soft group">
-<img alt="Abstract geometric colorful shapes representing graphic design" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj0N_JCmtC6ytwVLBNvK_gbbmniIzB1GdRzKcl6lo0Lp9UWV5f6Se_XfsHNAYKynCdDUTnmnQRijUh-UwHVMy040A2sCtDG6ZzEwN8RPEnZ4yLBxL7AiyuxtjBYHwXq8FVo6VaFOjoW2UyHbTvlDyT4h1n3PdW8OJhIjSitCZKV3CtW8dHBUh1XvGjEWTRbGhEC7OOFZN15NgYhD99eYslbjN-amt04n6_ji0rHfzviXfR1nQUC9_VubskgrGVgDQNfelWPJCXJHI"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-5">
-<h1 class="text-white text-2xl font-bold drop-shadow-md">تصميم بوستر سوشيال ميديا</h1>
-</div>
-</div>
-<div class="space-y-4 mb-8">
-<h2 class="text-lg font-bold text-gray-800 dark:text-white mb-3">اختر نوع الخدمة</h2>
-<label class="cursor-pointer block relative">
-<input checked="" class="service-radio hidden" name="service_type" type="radio"/>
-<div class="bg-surface-light dark:bg-surface-dark p-4 rounded-2xl border-2 border-transparent shadow-sm flex justify-between items-center transition-all duration-300">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-<span class="material-icons-outlined">star_outline</span>
-</div>
-<div>
-<h3 class="font-bold text-gray-800 dark:text-white">بوستر بسيط</h3>
-<p class="text-xs text-gray-500 dark:text-gray-400">تصميم سريع وجذاب</p>
-</div>
-</div>
-<div class="flex items-center gap-3">
-<span class="font-bold text-primary text-lg">30 ر.س</span>
-<div class="w-6 h-6 rounded-full border border-gray-300 dark:border-gray-600 flex items-center justify-center check-icon opacity-0 transition-opacity">
-<div class="w-3 h-3 bg-primary rounded-full"></div>
-</div>
-</div>
-</div>
-</label>
-<label class="cursor-pointer block relative">
-<input class="service-radio hidden" name="service_type" type="radio"/>
-<div class="bg-surface-light dark:bg-surface-dark p-4 rounded-2xl border-2 border-transparent shadow-sm flex justify-between items-center transition-all duration-300">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-<span class="material-icons-outlined">workspace_premium</span>
-</div>
-<div>
-<h3 class="font-bold text-gray-800 dark:text-white">بوستر احترافي</h3>
-<p class="text-xs text-gray-500 dark:text-gray-400">تصميم مخصص عالي الجودة</p>
-</div>
-</div>
-<div class="flex items-center gap-3">
-<span class="font-bold text-primary text-lg">50 ر.س</span>
-<div class="w-6 h-6 rounded-full border border-gray-300 dark:border-gray-600 flex items-center justify-center check-icon opacity-0 transition-opacity">
-<div class="w-3 h-3 bg-primary rounded-full"></div>
-</div>
-</div>
-</div>
-</label>
-</div>
-<div class="bg-surface-light dark:bg-surface-dark p-5 rounded-2xl shadow-sm mb-6">
-<div class="flex justify-between items-center mb-4 border-b border-gray-100 dark:border-gray-700 pb-4">
-<span class="font-bold text-gray-700 dark:text-gray-200">عدد المنشورات</span>
-<div class="flex items-center bg-input-light dark:bg-input-dark rounded-lg p-1">
-<button class="w-8 h-8 rounded-md bg-white dark:bg-gray-600 shadow-sm flex items-center justify-center text-primary hover:bg-gray-50 dark:hover:bg-gray-500 transition-colors">
-<span class="material-icons-outlined text-sm">remove</span>
-</button>
-<span class="w-8 text-center font-bold text-gray-800 dark:text-white">1</span>
-<button class="w-8 h-8 rounded-md bg-primary text-white shadow-sm flex items-center justify-center hover:bg-opacity-90 transition-colors">
-<span class="material-icons-outlined text-sm">add</span>
-</button>
-</div>
-</div>
-<div class="mb-2">
-<h4 class="font-bold text-sm text-gray-700 dark:text-gray-300 mb-2">وصف الخدمة</h4>
-<p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-                        خدمة تصميم بوسترات السوشيال ميديا تساعدك على إبراز هويتك التجارية. يشمل التصميم اختيار الألوان المناسبة والخطوط الجذابة لضمان وصول رسالتك للجمهور المستهدف.
-                    </p>
-</div>
-</div>
-<div class="mb-8">
-<label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">ملاحظات إضافية</label>
-<textarea class="w-full h-32 p-4 rounded-xl bg-input-light dark:bg-input-dark border-none focus:ring-2 focus:ring-primary text-gray-800 dark:text-white placeholder-gray-400 resize-none text-sm" placeholder="اكتب أي تفاصيل إضافية أو تعليمات خاصة للمصمم هنا..."></textarea>
-</div>
-<button class="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl hover:opacity-95 transform transition-all active:scale-95 flex items-center justify-center gap-2 mb-6">
-<span>إتمام الطلب</span>
-<span class="material-icons-outlined text-sm">arrow_back</span>
-</button>
-</main>
-<nav class="absolute bottom-0 w-full h-20 bg-black text-white rounded-t-[30px] shadow-nav z-30 flex justify-between items-center px-6 pb-2">
-<a class="flex flex-col items-center gap-1 text-gray-400 hover:text-primary transition-colors" href="#">
-<span class="material-icons-outlined text-2xl">favorite_border</span>
-<span class="text-[10px]">المفضلة</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-gray-400 hover:text-primary transition-colors mr-4" href="#">
-<span class="material-icons-outlined text-2xl">send</span>
-<span class="text-[10px]">العروض</span>
-</a>
-<div class="relative -top-8 group cursor-pointer">
-<div class="w-16 h-16 bg-primary rounded-full border-[6px] border-background-light dark:border-background-dark flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-<span class="material-icons-outlined text-white text-3xl">home</span>
-</div>
-<span class="absolute -bottom-4 w-full text-center text-[10px] font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity">الرئيسية</span>
-</div>
-<a class="flex flex-col items-center gap-1 text-gray-400 hover:text-primary transition-colors ml-4" href="#">
-<span class="material-icons-outlined text-2xl">receipt_long</span>
-<span class="text-[10px]">الطلبات</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-gray-400 hover:text-primary transition-colors" href="#">
-<span class="material-icons-outlined text-2xl">person_outline</span>
-<span class="text-[10px]">حسابي</span>
-</a>
-</nav>
-</div>
+</head>
+<body class="bg-cream text-text-dark font-body overflow-x-hidden">
+    
+    <!-- Floating Particles -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div class="particle top-1/4 right-1/4 delay-100"></div>
+        <div class="particle top-1/3 left-1/3 delay-200"></div>
+        <div class="particle top-2/3 right-1/3 delay-300"></div>
+        <div class="particle bottom-1/4 left-1/4 delay-400"></div>
+        <div class="particle top-1/2 right-1/2 delay-500"></div>
+    </div>
 
-</body></html>
+    <!-- Top Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" id="navbar">
+        <div class="glass shadow-lg shadow-primary/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer group">
+                        <span class="material-symbols-outlined text-primary text-3xl heartbeat">favorite</span>
+                        <h1 class="font-bold text-2xl tracking-tight text-text-dark group-hover:text-primary transition-colors">جنى & سامي</h1>
+                    </div>
+                    
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:block">
+                        <div class="flex items-baseline space-x-8 space-x-reverse">
+                            <a class="hover:text-primary px-4 py-2 rounded-full text-sm font-medium transition-all hover:bg-primary/10" href="#home">الرئيسية</a>
+                            <a class="hover:text-primary px-4 py-2 rounded-full text-sm font-medium transition-all hover:bg-primary/10" href="#story">قصتنا</a>
+                            <a class="hover:text-primary px-4 py-2 rounded-full text-sm font-medium transition-all hover:bg-primary/10" href="#details">التفاصيل</a>
+                            <a class="hover:text-primary px-4 py-2 rounded-full text-sm font-medium transition-all hover:bg-primary/10" href="#gallery">الصور</a>
+                        </div>
+                    </div>
+                    
+                    <!-- RSVP Button -->
+                    <div class="hidden md:block">
+                        <a class="bg-gradient-to-r from-primary to-primary-dark hover:from-primary-dark hover:to-primary text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-primary/30 flex items-center gap-2" href="#rsvp">
+                            <span>تأكيد الحضور</span>
+                            <span class="material-symbols-outlined text-sm">arrow_back</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Mobile menu button -->
+                    <div class="-ml-2 flex md:hidden">
+                        <button class="inline-flex items-center justify-center p-2 rounded-full text-primary hover:bg-primary/10 focus:outline-none transition-all" type="button" id="mobile-menu-btn">
+                            <span class="material-symbols-outlined text-2xl">menu</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden glass mt-2 mx-4 rounded-2xl overflow-hidden shadow-xl" id="mobile-menu">
+            <div class="px-4 py-6 space-y-3">
+                <a class="block px-4 py-3 rounded-xl text-base font-medium hover:bg-primary/10 hover:text-primary transition-all" href="#home">الرئيسية</a>
+                <a class="block px-4 py-3 rounded-xl text-base font-medium hover:bg-primary/10 hover:text-primary transition-all" href="#story">قصتنا</a>
+                <a class="block px-4 py-3 rounded-xl text-base font-medium hover:bg-primary/10 hover:text-primary transition-all" href="#details">التفاصيل</a>
+                <a class="block px-4 py-3 rounded-xl text-base font-medium hover:bg-primary/10 hover:text-primary transition-all" href="#gallery">الصور</a>
+                <a class="block px-4 py-3 rounded-xl text-base font-bold bg-primary text-white text-center" href="#rsvp">تأكيد الحضور</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden flower-pattern" id="home">
+        <!-- Background Decorations -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-rose-light/50 to-transparent rounded-full blur-3xl floating-element"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-secondary/30 to-transparent rounded-full blur-3xl floating-element delay-200"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary-light/20 via-rose-light/20 to-secondary/20 rounded-full blur-3xl"></div>
+        </div>
+        
+        <!-- Content -->
+        <div class="relative z-20 text-center px-4 max-w-5xl mx-auto flex flex-col items-center gap-10 pt-24">
+            <!-- Decorative Top -->
+            <div class="animate-fade-in-down">
+                <div class="flex items-center gap-4 justify-center mb-4">
+                    <div class="w-20 h-[2px] bg-gradient-to-r from-transparent to-primary"></div>
+                    <span class="material-symbols-outlined text-primary text-2xl animate-pulse-soft">spa</span>
+                    <div class="w-20 h-[2px] bg-gradient-to-l from-transparent to-primary"></div>
+                </div>
+                <p class="text-primary uppercase tracking-[0.3em] text-sm md:text-base font-semibold">بمناسبة زفافنا السعيد</p>
+            </div>
+            
+            <!-- Main Title -->
+            <div class="space-y-6 animate-scale-in">
+                <h1 class="font-bold text-6xl md:text-8xl lg:text-9xl leading-none">
+                    <span class="text-primary">جنى</span>
+                    <span class="text-rose-400 mx-4">&</span>
+                    <span class="text-secondary">سامي</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-text-light font-light max-w-2xl mx-auto leading-relaxed">
+                    نتشرف بدعوتكم لمشاركتنا أجمل لحظات حياتنا
+                </p>
+            </div>
+            
+            <!-- Date Card -->
+            <div class="flex flex-col md:flex-row gap-6 items-center mt-6 animate-fade-in-up">
+                <div class="glass px-10 py-6 rounded-3xl flex items-center gap-5 hover-lift">
+                    <div class="bg-gradient-to-br from-primary to-primary-dark p-4 rounded-2xl text-white">
+                        <span class="material-symbols-outlined text-4xl">calendar_month</span>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-xs text-text-light uppercase tracking-wider mb-1">موعد الحفل</p>
+                        <p class="text-2xl font-bold text-text-dark">٢٤ سبتمبر ٢٠٢٤</p>
+                        <p class="text-sm text-primary">الموافق ١٩ ربيع الأول ١٤٤٦</p>
+                    </div>
+                </div>
+                
+                <a class="bg-gradient-to-r from-primary via-primary-dark to-primary text-white text-lg font-bold py-5 px-12 rounded-full transition-all transform hover:scale-105 shadow-xl shadow-primary/30 hover:shadow-2xl hover:shadow-primary/40 flex items-center gap-3" href="#rsvp">
+                    <span class="material-symbols-outlined">celebration</span>
+                    <span>شاركونا الفرحة</span>
+                </a>
+            </div>
+            
+            <!-- Decorative Bottom -->
+            <div class="flex items-center gap-3 text-primary/50 mt-8">
+                <span class="material-symbols-outlined text-sm">star</span>
+                <span class="material-symbols-outlined text-lg">star</span>
+                <span class="material-symbols-outlined text-xl">favorite</span>
+                <span class="material-symbols-outlined text-lg">star</span>
+                <span class="material-symbols-outlined text-sm">star</span>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce-slow">
+            <a class="text-primary/70 hover:text-primary transition-colors flex flex-col items-center gap-2" href="#countdown">
+                <span class="text-sm">اكتشف المزيد</span>
+                <span class="material-symbols-outlined text-3xl">keyboard_arrow_down</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Countdown Timer -->
+    <section class="py-20 bg-gradient-to-b from-cream via-soft-gray to-cream relative overflow-hidden" id="countdown">
+        <div class="absolute inset-0 flower-pattern opacity-50"></div>
+        
+        <div class="max-w-5xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-12 animate-fade-in-up">
+                <h3 class="text-3xl font-bold text-text-dark mb-3">العد التنازلي ليومنا المميز</h3>
+                <div class="decorative-line w-32 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+                <!-- Days -->
+                <div class="hover-lift bg-white p-8 rounded-3xl shadow-lg shadow-primary/10 text-center border border-primary/10 group" data-aos="fade-up">
+                    <div class="relative">
+                        <span class="font-bold text-5xl md:text-6xl bg-gradient-to-br from-primary to-primary-dark bg-clip-text text-transparent" id="days">٢٥</span>
+                        <div class="absolute -top-2 -right-2 w-4 h-4 bg-rose-light rounded-full animate-pulse-soft"></div>
+                    </div>
+                    <span class="text-text-light text-lg mt-3 block group-hover:text-primary transition-colors">يوم</span>
+                </div>
+                
+                <!-- Hours -->
+                <div class="hover-lift bg-white p-8 rounded-3xl shadow-lg shadow-primary/10 text-center border border-primary/10 group" style="animation-delay: 0.1s">
+                    <div class="relative">
+                        <span class="font-bold text-5xl md:text-6xl bg-gradient-to-br from-secondary to-teal-500 bg-clip-text text-transparent" id="hours">١٤</span>
+                        <div class="absolute -top-2 -right-2 w-4 h-4 bg-secondary/50 rounded-full animate-pulse-soft delay-100"></div>
+                    </div>
+                    <span class="text-text-light text-lg mt-3 block group-hover:text-secondary transition-colors">ساعة</span>
+                </div>
+                
+                <!-- Minutes -->
+                <div class="hover-lift bg-white p-8 rounded-3xl shadow-lg shadow-primary/10 text-center border border-primary/10 group" style="animation-delay: 0.2s">
+                    <div class="relative">
+                        <span class="font-bold text-5xl md:text-6xl bg-gradient-to-br from-rose-400 to-rose bg-clip-text text-transparent" id="minutes">٣٠</span>
+                        <div class="absolute -top-2 -right-2 w-4 h-4 bg-rose-light rounded-full animate-pulse-soft delay-200"></div>
+                    </div>
+                    <span class="text-text-light text-lg mt-3 block group-hover:text-rose-400 transition-colors">دقيقة</span>
+                </div>
+                
+                <!-- Seconds -->
+                <div class="hover-lift bg-white p-8 rounded-3xl shadow-lg shadow-primary/10 text-center border border-primary/10 group" style="animation-delay: 0.3s">
+                    <div class="relative">
+                        <span class="font-bold text-5xl md:text-6xl bg-gradient-to-br from-primary-light to-primary bg-clip-text text-transparent" id="seconds">٤٥</span>
+                        <div class="absolute -top-2 -right-2 w-4 h-4 bg-primary-light/50 rounded-full animate-pulse-soft delay-300"></div>
+                    </div>
+                    <span class="text-text-light text-lg mt-3 block group-hover:text-primary transition-colors">ثانية</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-24 md:py-32 bg-white relative overflow-hidden" id="story">
+        <!-- Decorations -->
+        <div class="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-rose-light/30 to-transparent rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-72 h-72 bg-gradient-to-tl from-secondary/20 to-transparent rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <!-- Image Side -->
+                <div class="order-2 md:order-1 relative animate-slide-in-left">
+                    <div class="aspect-[4/5] rounded-3xl overflow-hidden relative z-10 shadow-2xl shadow-primary/20 transform -rotate-2 hover:rotate-0 transition-all duration-700">
+                        <img alt="صورة العروسين" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjvKN5dnTWOVq3rtXVNwhAFCtRIJ7mSxzFgb4QWDjtwyHqTYI4y0yREfYswzad2P0yy9jWaoGzKLDO7zlx9PL1jjjzgOCnTaIpQ56t3KKIAXPdJrKrE5QbHynfNzRRAT0JDe2-Ny6XPvmOO-sYWFNVXrzUpQkHDZHAj2Sp3Xa3__sWbhWXlaNe964VXnIOx6S9tuseKszkQAl5_6b1OFHyHCkLvj7GZ7iueu7MjhC0GeVEMILMxgvroNqrqeuvj7Zl4hd_uEsyAx7V"/>
+                    </div>
+                    <!-- Decorative Frame -->
+                    <div class="absolute inset-0 border-4 border-primary/30 rounded-3xl translate-x-6 translate-y-6 -z-0 hidden md:block"></div>
+                    <!-- Floating Hearts -->
+                    <div class="absolute -top-4 -right-4 text-rose-400 animate-float delay-100">
+                        <span class="material-symbols-outlined text-4xl">favorite</span>
+                    </div>
+                    <div class="absolute -bottom-4 -left-4 text-primary animate-float delay-300">
+                        <span class="material-symbols-outlined text-3xl">favorite</span>
+                    </div>
+                </div>
+                
+                <!-- Text Side -->
+                <div class="order-1 md:order-2 space-y-8 animate-slide-in-right">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-[2px] bg-primary"></div>
+                            <span class="text-primary font-bold uppercase tracking-wider text-sm">قصة حبنا</span>
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-text-dark leading-tight">
+                            بدأت من <span class="text-primary relative">لقاء
+                                <svg class="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 100 8">
+                                    <path d="M0 4 Q25 0, 50 4 T100 4" stroke="#d4a574" stroke-width="2" fill="none" class="animate-pulse-soft"/>
+                                </svg>
+                            </span> صدفة
+                        </h2>
+                        <p class="text-text-light text-lg leading-relaxed mb-6">
+                            قبل خمس سنوات، جمعتنا الصدفة في مناسبة عائلية. ما كان يفترض أن يكون لقاءً عابراً تحول إلى ساعات من الحديث عن الأحلام والطموحات. منذ ذلك اليوم، سافرنا معاً إلى بلدان عديدة، وبنينا حياة مليئة بالحب والضحك.
+                        </p>
+                        <p class="text-text-light text-lg leading-relaxed">
+                            والآن، نحن مستعدون للبدء في أجمل مغامرة في حياتنا، ولا نتخيل أن نفعل ذلك بدون وجودكم بجانبنا.
+                        </p>
+                    </div>
+                    
+                    <!-- Timeline Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div class="hover-lift flex items-start gap-4 p-5 rounded-2xl bg-gradient-to-br from-rose-light/30 to-white border border-rose-light group">
+                            <div class="bg-gradient-to-br from-rose-400 to-rose p-3 rounded-xl text-white shadow-lg shadow-rose/30">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1 text-text-dark">اللقاء الأول</h4>
+                                <p class="text-sm text-text-light">مناسبة عائلية مباركة</p>
+                            </div>
+                        </div>
+                        <div class="hover-lift flex items-start gap-4 p-5 rounded-2xl bg-gradient-to-br from-primary-light/30 to-white border border-primary-light group">
+                            <div class="bg-gradient-to-br from-primary to-primary-dark p-3 rounded-xl text-white shadow-lg shadow-primary/30">
+                                <span class="material-symbols-outlined">diamond</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1 text-text-dark">الخطوبة</h4>
+                                <p class="text-sm text-text-light">في جو عائلي دافئ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Section -->
+    <section class="py-24 bg-gradient-to-b from-soft-gray to-cream relative overflow-hidden" id="details">
+        <div class="absolute inset-0 flower-pattern opacity-30"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="flex items-center gap-4 justify-center mb-6">
+                    <div class="w-16 h-[2px] bg-gradient-to-r from-transparent to-primary"></div>
+                    <span class="material-symbols-outlined text-primary text-3xl">info</span>
+                    <div class="w-16 h-[2px] bg-gradient-to-l from-transparent to-primary"></div>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-text-dark">تفاصيل الحفل</h2>
+                <p class="text-text-light text-lg">كل ما تحتاجون معرفته عن يومنا المميز</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Location Card -->
+                <div class="hover-lift bg-white p-10 rounded-3xl text-center border border-primary/10 shadow-xl shadow-primary/5 group">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-primary-light/50 to-primary/20 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform duration-500">
+                        <span class="material-symbols-outlined text-4xl">location_on</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-text-dark">مكان الحفل</h3>
+                    <p class="text-text-light mb-4 leading-relaxed">قاعة الأحلام الذهبية<br/>شارع الملك فهد، الرياض</p>
+                    <a class="inline-flex items-center gap-2 text-primary text-sm font-bold uppercase tracking-wide hover:underline group-hover:gap-3 transition-all" href="#">
+                        <span>عرض الخريطة</span>
+                        <span class="material-symbols-outlined text-sm">open_in_new</span>
+                    </a>
+                </div>
+                
+                <!-- Time Card -->
+                <div class="hover-lift bg-white p-10 rounded-3xl text-center border border-secondary/20 shadow-xl shadow-secondary/5 group">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-secondary/30 to-secondary/10 rounded-2xl flex items-center justify-center text-secondary mb-8 group-hover:scale-110 transition-transform duration-500">
+                        <span class="material-symbols-outlined text-4xl">schedule</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-text-dark">البرنامج الزمني</h3>
+                    <ul class="text-text-light text-base space-y-3">
+                        <li class="flex items-center justify-between px-4 py-2 bg-soft-gray rounded-xl">
+                            <span>استقبال الضيوف</span>
+                            <strong class="text-secondary">٧:٠٠ م</strong>
+                        </li>
+                        <li class="flex items-center justify-between px-4 py-2 bg-soft-gray rounded-xl">
+                            <span>حفل الزفاف</span>
+                            <strong class="text-secondary">٨:٠٠ م</strong>
+                        </li>
+                        <li class="flex items-center justify-between px-4 py-2 bg-soft-gray rounded-xl">
+                            <span>العشاء</span>
+                            <strong class="text-secondary">٩:٣٠ م</strong>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Dress Code Card -->
+                <div class="hover-lift bg-white p-10 rounded-3xl text-center border border-rose/20 shadow-xl shadow-rose/5 group">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-rose-light/50 to-rose/20 rounded-2xl flex items-center justify-center text-rose-400 mb-8 group-hover:scale-110 transition-transform duration-500">
+                        <span class="material-symbols-outlined text-4xl">checkroom</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-text-dark">قواعد اللباس</h3>
+                    <p class="text-text-light mb-3 text-lg">أناقة رسمية</p>
+                    <p class="text-sm text-text-light/70 leading-relaxed">للرجال: بدلة رسمية<br/>للسيدات: فستان سهرة أنيق</p>
+                </div>
+            </div>
+            
+            <!-- Map Section -->
+            <div class="mt-16 rounded-3xl overflow-hidden h-[400px] w-full relative group shadow-2xl shadow-primary/10">
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent group-hover:opacity-0 transition-opacity pointer-events-none z-10"></div>
+                <img alt="خريطة الموقع" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRAP2CrRx5weAnJfqt-lTSjmbf_l7IVTw_-Mwjg9dNp4LHSGOjUZMd9QHHWs73KzqTiXtksOCGtQacYo67nX7_gKxa8H4S912xjhvrcR_cSUMcO1m4VYZY2NRD6VXP7IGbLkjLtm200zLrmHEgpbs66FUgVWqSNVwb1yYL9mfqKLcBBQVqoWtKtJtDUnEBI6iZBW6IMz6iKyUZNT9FSV754uxoUEuzQ7Zchu5yNlsSa9MjllobaUY_pZYeRBpgjKK9LhQvIoerwrjJ"/>
+                <div class="absolute bottom-8 right-8 z-20 glass p-5 rounded-2xl shadow-xl">
+                    <p class="text-text-dark font-bold text-lg">قاعة الأحلام الذهبية</p>
+                    <p class="text-text-light text-sm">الرياض، المملكة العربية السعودية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-24 bg-white overflow-hidden" id="gallery">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-[2px] bg-primary"></div>
+                        <span class="text-primary font-bold uppercase tracking-wider text-sm">ألبوم الصور</span>
+                    </div>
+                    <h2 class="text-4xl font-bold text-text-dark">لحظات لا تُنسى</h2>
+                    <p class="text-text-light mt-2">لمحات من حياتنا معاً</p>
+                </div>
+                <a class="text-primary hover:text-primary-dark font-medium flex items-center gap-2 transition-all hover:gap-3 group" href="#">
+                    <span>عرض كل الصور</span>
+                    <span class="material-symbols-outlined group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                </a>
+            </div>
+            
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+                <!-- Image 1 -->
+                <div class="break-inside-avoid relative group rounded-3xl overflow-hidden cursor-pointer hover-lift">
+                    <img alt="صورة في الحديقة" class="w-full h-auto transform group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt8yl_H_lpiW479QEfdtffXgCr8IZTecDyyuuPaDTwegZ2CQqy5PI0MQ5XcRnyhOMJxBuonf4UQwYxU8lg0Vp68pMONtIETAM7Kkqq_xlHEUKrz74MxYUGizwyFI0natcqL4eJ3hSfmBoW4MiBX5DBuWQ4cN7bzJAMBzrB2nNWWRQAFGUYudKyAI8b4K3aHpxESlw-3_ksV4iizZPKbSKGy9hAQVgF0XPVQTwSBKeUxcwnkR6ehj2FGQPo38LiMCMgMXiSGpxMQ52w"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <p class="text-white font-bold text-lg">نزهة الخريف</p>
+                        <p class="text-primary text-sm">أكتوبر ٢٠٢٢</p>
+                    </div>
+                </div>
+                
+                <!-- Image 2 -->
+                <div class="break-inside-avoid relative group rounded-3xl overflow-hidden cursor-pointer hover-lift">
+                    <img alt="خاتم الخطوبة" class="w-full h-auto transform group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp4U-HRQbHyAaKtZ_3stHSL9PzQF_iR3rBODTNTIWQmjj99UK5KpwiFXiP_828dQM42NovZ3ClFOT-oHqD77sKirYPe8_8QZF3E_yVFY7VkDt-OmTZ6FOXGZ7pNO6HFErlq-y3l_qjrzGexFJ7YCfRk7ppCW_NthsfgC3SRZDCV-FE8kFJjTFz9PCMmnJtU1DscGUpygKIen1e4zGTumi7tlLpt0pau6Da_Xv4bpSyGEFDMNE0B2Dcge-JMznjISCAtvW6n65U_qnr"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <p class="text-white font-bold text-lg">قالت نعم!</p>
+                        <p class="text-primary text-sm">الخاتم</p>
+                    </div>
+                </div>
+                
+                <!-- Image 3 -->
+                <div class="break-inside-avoid relative group rounded-3xl overflow-hidden cursor-pointer hover-lift">
+                    <img alt="عشاء رومانسي" class="w-full h-auto transform group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI3z49ePbA0dRDxRZuXBXiaimktADQmgULQeddlgxraZvcZ3LLioghazePlYHiMyTmhNGNmXevbf-KcbwovB3bwKidCb6TYv4oTU_6aXLauw9PHrBquYbRVWdL6cMrr3_609BVNgTsAAkH5YkiixcqWsRhvo1RvSwMSUq84V2V6-vppugR90a9nwQFQjuytb6nY-I0UkHtL45WV95NwK1jHrfTLO3d4JCVsRWKjmJOLO9iTugpXgoFpfT_jie8BhkFHm3Gijult1ep"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <p class="text-white font-bold text-lg">عشاء الذكرى السنوية</p>
+                        <p class="text-primary text-sm">السنة الثالثة</p>
+                    </div>
+                </div>
+                
+                <!-- Image 4 -->
+                <div class="break-inside-avoid relative group rounded-3xl overflow-hidden cursor-pointer hover-lift">
+                    <img alt="رحلة الجبال" class="w-full h-auto transform group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIhm4gnmqv9pVQ9sP6okpUlyFUmgybIHimA3THtDsGgisUuyO4NP2uw8_bDQMF_ebqgOLa5ZoL3IudfYmSX2Tn_g1-6d-VF-txJg-bqgP9x3bI8o-iZjLL34qEC-scB6v9qCnEYkvD5LOD8nkwbG0SJB5jo5J8j07zLV188DHko8s0WQnh792xEX6kcZKUEV3yFsoCAPu7su7wJ4sPwrnMfwAHxKb_zrw2sWKZ4KgEakRVwiNhvUb3tGY6DrJhYoB4Gqv7eibGmogF"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <p class="text-white font-bold text-lg">مغامرات الجبال</p>
+                        <p class="text-primary text-sm">رحلة الصيف</p>
+                    </div>
+                </div>
+                
+                <!-- Image 5 -->
+                <div class="break-inside-avoid relative group rounded-3xl overflow-hidden cursor-pointer hover-lift">
+                    <img alt="صورة بورتريه" class="w-full h-auto transform group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3jt8_Nts44U3zMy-6kO0R6b9LDEnT35JyPtUjGYAE3vKOdn9aPQBcpGbxSydqde0pQjCBOItQJVd1Zjc8ga_e5euRzPGI5KOeh4cmQK7Tpy2tRoPdpJAmct70JUn8QVaMpegtSZtHsK2BM60bgR-QHY5xbBvc_aY8JkvyPIbqRei0_DGmAGhb8o2xzPszzRGckazkgSvqMlD7oMs6xhCeEtJY_jEZ9hz86r7tMrQKu4EkAqHfWQDeA9xWjcDocR1zs0msQ4vgxCd4"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <p class="text-white font-bold text-lg">جلسة تصوير</p>
+                        <p class="text-primary text-sm">ذكريات جميلة</p>
+                    </div>
+                </div>
+                
+                <!-- Image 6 -->
+                <div class="break-inside-avoid relative group rounded-3xl overflow-hidden cursor-pointer hover-lift">
+                    <img alt="غروب الشاطئ" class="w-full h-auto transform group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhsV7WO4wGoe6nlQiMO7a6NHRjfC0APNgZtqFm4ESnhM6mpfqF0WW0LBUACR_s_cFJHTkWnpddrsghSys1-h82GUXQupdiAVvhG99pKHcwBa3EPUsWFpyzm1XA9U4JgqbXwcqheY61gGd-zImy7L6PnqHlCyrSjtNCig93rPP8bUnIIFFyNdmGXwhhZDLfoHxMaTi8PmcbRFT7CvSZzLjyVYsWE_VJeDTuwmkO_DYpg9ornlUhQ1SUgs07MPpVFye5oWY-zf43mvp5"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <p class="text-white font-bold text-lg">رقصة على الشاطئ</p>
+                        <p class="text-primary text-sm">صيف ٢٠٢٣</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section class="py-24 bg-gradient-to-b from-cream to-soft-gray relative overflow-hidden" id="rsvp">
+        <div class="absolute inset-0 flower-pattern opacity-30"></div>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-white rounded-[3rem] shadow-2xl shadow-primary/10 overflow-hidden border border-primary/10">
+                <div class="flex flex-col md:flex-row">
+                    <!-- Image Side -->
+                    <div class="md:w-2/5 relative h-72 md:h-auto">
+                        <img alt="ديكور الزفاف" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCciCXniOBIxvxxZZlP2e10UqUtFDZ4kAwyHFKiuO-Pg0f5syK2lN2E5QOWXBiOo8B3aV8-9Yzssgum4gNfDl0ut1Jk81PPH2I02r3JLmlPbk96zA-fOy_mJvDYhlxrgzdavZOKxlG2GrCuMhbYF3paXbrVCpRL-HNXzfmKPzDp7xkT8cMYAy-cL5ZzLssw3V6dPk4-Nb4QNkX1wPMj_T1D2vXzvni-nPLmRlsQcNfJPT5gKclPb1oG5NDi56VdlUEEShw7XI4NN7IW"/>
+                        <div class="absolute inset-0 bg-gradient-to-l from-primary/30 to-transparent mix-blend-overlay"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <span class="material-symbols-outlined text-6xl mb-4 drop-shadow-lg">mail</span>
+                                <p class="text-2xl font-bold drop-shadow-lg">نتشوق لحضوركم</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Form Side -->
+                    <div class="md:w-3/5 p-10 md:p-14">
+                        <div class="mb-10">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="material-symbols-outlined text-primary">edit_note</span>
+                                <h2 class="text-3xl font-bold text-text-dark">تأكيد الحضور</h2>
+                            </div>
+                            <p class="text-text-light">يرجى تأكيد حضوركم قبل تاريخ ٢٤ أغسطس ٢٠٢٤</p>
+                        </div>
+                        
+                        <form class="space-y-6" id="rsvp-form">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-text-dark mb-2" for="first-name">الاسم الأول</label>
+                                    <input class="w-full rounded-2xl border-2 border-soft-gray bg-soft-gray text-text-dark shadow-sm focus:border-primary focus:ring-primary focus:bg-white transition-all px-5 py-4" id="first-name" type="text" placeholder="أدخل اسمك الأول"/>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-text-dark mb-2" for="last-name">اسم العائلة</label>
+                                    <input class="w-full rounded-2xl border-2 border-soft-gray bg-soft-gray text-text-dark shadow-sm focus:border-primary focus:ring-primary focus:bg-white transition-all px-5 py-4" id="last-name" type="text" placeholder="أدخل اسم العائلة"/>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-text-dark mb-2" for="phone">رقم الجوال</label>
+                                <input class="w-full rounded-2xl border-2 border-soft-gray bg-soft-gray text-text-dark shadow-sm focus:border-primary focus:ring-primary focus:bg-white transition-all px-5 py-4" id="phone" type="tel" placeholder="05xxxxxxxx"/>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-text-dark mb-2" for="guests">عدد الحضور</label>
+                                    <select class="w-full rounded-2xl border-2 border-soft-gray bg-soft-gray text-text-dark shadow-sm focus:border-primary focus:ring-primary focus:bg-white transition-all px-5 py-4" id="guests">
+                                        <option>١</option>
+                                        <option>٢</option>
+                                        <option>٣</option>
+                                        <option>٤</option>
+                                        <option>٥</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-text-dark mb-2" for="attendance">هل ستحضرون؟</label>
+                                    <select class="w-full rounded-2xl border-2 border-soft-gray bg-soft-gray text-text-dark shadow-sm focus:border-primary focus:ring-primary focus:bg-white transition-all px-5 py-4" id="attendance">
+                                        <option>بكل سرور نؤكد حضورنا</option>
+                                        <option>نعتذر عن الحضور</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-text-dark mb-2" for="message">رسالة للعروسين (اختياري)</label>
+                                <textarea class="w-full rounded-2xl border-2 border-soft-gray bg-soft-gray text-text-dark shadow-sm focus:border-primary focus:ring-primary focus:bg-white transition-all px-5 py-4" id="message" rows="3" placeholder="اكتب رسالتك هنا..."></textarea>
+                            </div>
+                            
+                            <button class="w-full flex justify-center items-center gap-3 py-5 px-6 rounded-full text-lg font-bold text-white bg-gradient-to-r from-primary via-primary-dark to-primary hover:from-primary-dark hover:to-primary focus:outline-none focus:ring-4 focus:ring-primary/30 transition-all transform hover:scale-[1.02] shadow-xl shadow-primary/30" type="submit">
+                                <span class="material-symbols-outlined">send</span>
+                                <span>إرسال التأكيد</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-b from-soft-gray to-cream py-16 border-t border-primary/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center space-y-8">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary text-4xl heartbeat">favorite</span>
+                <h2 class="font-bold text-3xl text-text-dark">جنى & سامي</h2>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="flex space-x-6 space-x-reverse">
+                <a class="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg shadow-primary/10 text-text-light hover:text-primary hover:shadow-primary/20 transition-all hover:-translate-y-1" href="#">
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a class="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg shadow-primary/10 text-text-light hover:text-primary hover:shadow-primary/20 transition-all hover:-translate-y-1" href="#">
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </a>
+                <a class="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg shadow-primary/10 text-text-light hover:text-primary hover:shadow-primary/20 transition-all hover:-translate-y-1" href="#">
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                </a>
+            </div>
+            
+            <!-- Decorative Line -->
+            <div class="decorative-line w-48"></div>
+            
+            <!-- Copyright -->
+            <p class="text-center text-text-light text-sm">
+                صُمم بكل 
+                <span class="material-symbols-outlined text-primary text-sm align-middle">favorite</span>
+                 لحفل زفاف جنى وسامي ٢٠٢٤
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+        
+        // Countdown Timer
+        function updateCountdown() {
+            const weddingDate = new Date('2024-09-24T19:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Convert to Arabic numerals
+            const toArabic = (num) => {
+                const arabicNumerals = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
+                return String(num).split('').map(d => arabicNumerals[parseInt(d)]).join('');
+            };
+            
+            document.getElementById('days').textContent = toArabic(days);
+            document.getElementById('hours').textContent = toArabic(hours);
+            document.getElementById('minutes').textContent = toArabic(minutes);
+            document.getElementById('seconds').textContent = toArabic(seconds);
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Form submission
+        document.getElementById('rsvp-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('شكراً لتأكيد حضوركم! نتطلع لرؤيتكم في حفل زفافنا 💕');
+        });
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
